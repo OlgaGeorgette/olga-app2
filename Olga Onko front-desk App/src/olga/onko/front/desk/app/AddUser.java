@@ -54,7 +54,7 @@ public class AddUser extends JFrame implements ActionListener {
         l22 = new JLabel("Name");
         l33 = new JLabel("Telephone");
         age = new JLabel("Age");
-        dob = new JLabel("Date of birth");
+        dob = new JLabel("Date of birth(2018-04-04)");
          gender = new JLabel("Gender");
         tf1 = new JTextField();
         p1 = new JPasswordField();
@@ -85,10 +85,10 @@ public class AddUser extends JFrame implements ActionListener {
         Male.setBounds(300, 350, 200, 30);
         female.setBounds(300, 350, 200, 30);
         p1.setBounds(300, 110, 200, 30);
-        Lbtn1.setBounds(390, 410, 100, 30);
+        Lbtn1.setBounds(390, 420, 100, 30);
         Lbtn1.addActionListener(this);
 
-        clear.setBounds(250, 410, 100, 30);
+        clear.setBounds(250, 420, 100, 30);
         clear.addActionListener(this);
 
         frame.add(l1);
@@ -109,11 +109,9 @@ public class AddUser extends JFrame implements ActionListener {
         ButtonGroup group = new ButtonGroup();
 
         group.add(Male);
-
         group.add(female);
         frame.add(gender);
         frame.add(Male);
-
         frame.add(female);
         frame.add(Lbtn1);
         frame.add(clear);

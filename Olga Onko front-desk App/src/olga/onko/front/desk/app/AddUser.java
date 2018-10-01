@@ -15,11 +15,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 
@@ -36,8 +38,8 @@ public class AddUser extends JFrame implements ActionListener {
     String ppl;
     int people;
   JTextField tf1=new JTextField(20);;
-    JLabel l1s, l2, l3,l22, l33;
-    JTextField tf1s,name,tel;
+    JLabel l1s, l2, l3,l22, l33,age,dob;
+    JTextField tf1s,name,tel,ages,dobs;
     JButton Lbtn1;
     JButton clear = new JButton("Clear");
     JPasswordField p1;
@@ -52,19 +54,31 @@ public class AddUser extends JFrame implements ActionListener {
         l3 = new JLabel("Password");
         l22 = new JLabel("Name");
         l33 = new JLabel("Telephone");
+        age = new JLabel("Age");
+        dob = new JLabel("Dete of birth");
         tf1 = new JTextField();
         p1 = new JPasswordField();
          name = new JTextField();
           tel = new JTextField();
+          ages = new JTextField();
+          dobs = new JTextField();
         Lbtn1 = new JButton("Save");
 
+         JRadioButton Male = new JRadioButton("Male", true);
+
+       JRadioButton female = new JRadioButton("Female");
+        
         l1.setBounds(200, 30, 400, 30);
         l2.setBounds(80, 70, 200, 30);
         l3.setBounds(80, 110, 200, 30);
         l22.setBounds(80, 160, 200, 30);
          l.setBounds(80, 70, 200, 30);
         l33.setBounds(80, 210, 200, 30);
+        age.setBounds(80, 260, 200, 30);
+        dob.setBounds(80, 310, 200, 30);
         tf1.setBounds(300, 70, 200, 30);
+         name.setBounds(300, 150, 200, 30);
+          tel.setBounds(300, 200, 200, 30);
         p1.setBounds(300, 110, 200, 30);
         Lbtn1.setBounds(390, 260, 100, 30);
         Lbtn1.addActionListener(this);
@@ -81,6 +95,18 @@ public class AddUser extends JFrame implements ActionListener {
         frame.add(name);
         frame.add(l33);
         frame.add(tel);
+        frame.add(age);
+        frame.add(dob);
+        //Group the radio buttons.
+
+      ButtonGroup group = new ButtonGroup();
+
+      group.add(Male);
+
+      group.add(female);
+      frame.add(Male);
+
+      frame.add(female);
         frame.add(Lbtn1);
         frame.add(clear);
         frame.setSize(400, 400);

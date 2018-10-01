@@ -63,13 +63,13 @@ public class AddUser extends JFrame implements ActionListener {
         l3.setBounds(80, 110, 200, 30);
         l22.setBounds(80, 160, 200, 30);
          l.setBounds(80, 70, 200, 30);
-        l33.setBounds(80, 110, 200, 30);
+        l33.setBounds(80, 210, 200, 30);
         tf1.setBounds(300, 70, 200, 30);
         p1.setBounds(300, 110, 200, 30);
-        Lbtn1.setBounds(390, 160, 100, 30);
+        Lbtn1.setBounds(390, 260, 100, 30);
         Lbtn1.addActionListener(this);
 
-        clear.setBounds(250, 160, 100, 30);
+        clear.setBounds(250, 260, 100, 30);
         clear.addActionListener(this);
 
         frame.add(l1);
@@ -77,6 +77,10 @@ public class AddUser extends JFrame implements ActionListener {
         frame.add(tf1);
         frame.add(l3);
         frame.add(p1);
+        frame.add(l22);
+        frame.add(name);
+        frame.add(l33);
+        frame.add(tel);
         frame.add(Lbtn1);
         frame.add(clear);
         frame.setSize(400, 400);

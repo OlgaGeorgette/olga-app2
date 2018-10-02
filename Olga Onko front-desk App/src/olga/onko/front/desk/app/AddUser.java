@@ -43,7 +43,8 @@ public class AddUser extends JFrame implements ActionListener {
     JButton Lbtn1;
     JButton clear = new JButton("Clear");
     JPasswordField p1;
-  String genders="M";
+    String genders = "M";
+
     AddUser() {
         l1 = new JLabel("Add User");
         l1.setForeground(Color.blue);
@@ -55,7 +56,7 @@ public class AddUser extends JFrame implements ActionListener {
         l33 = new JLabel("Telephone");
         age = new JLabel("Age");
         dob = new JLabel("Date of birth(2018-04-04)");
-         gender = new JLabel("Gender");
+        gender = new JLabel("Gender");
         tf1 = new JTextField();
         p1 = new JPasswordField();
         name = new JTextField();
@@ -101,7 +102,7 @@ public class AddUser extends JFrame implements ActionListener {
         frame.add(l33);
         frame.add(tel);
         frame.add(age);
-          frame.add(ages);
+        frame.add(ages);
         frame.add(dob);
         frame.add(dobs);
         //Group the radio buttons.
@@ -133,7 +134,7 @@ public class AddUser extends JFrame implements ActionListener {
                 Statement st = con.createStatement();
 
                 st.executeUpdate("insert into user VALUES(null,'"
-                     + tf1.getText() + "','" + p1.getText() + "','" + name.getText() + "','"+ genders + "','"+ tel.getText() +"','"
+                        + tf1.getText() + "','" + p1.getText() + "','" + name.getText() + "','" + genders + "','" + tel.getText() + "','"
                         + dobs.getText() + "','"
                         + ages.getText() + "')");
 
@@ -143,8 +144,8 @@ public class AddUser extends JFrame implements ActionListener {
 
                 st.close();
                 con.close();
-               Welcome wels =new Welcome();
-               wels.setVisible(true);
+                Welcome wels = new Welcome();
+                wels.setVisible(true);
             } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException | HeadlessException e1) {
                 System.out.println("Exception:" + e1);
             }
